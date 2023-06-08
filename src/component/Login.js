@@ -1,5 +1,4 @@
 import React from "react";
-
 const LOGIN = () => {
   return (
     <div className="container text-center">
@@ -53,7 +52,9 @@ const LOGIN = () => {
           </div>
         </div>
       </div>
+     
     </div>
+    
   );
 };
 export default LOGIN;

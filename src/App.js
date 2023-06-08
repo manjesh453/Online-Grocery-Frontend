@@ -1,12 +1,16 @@
 import "./App.css";
 import Navigator from "./component/NavBar";
-import REGISTER from "./component/Register";
-{}
+import USERHOME from "./component/UserHome";
+import LOGIN from "./component/Login";
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 function App() {
   return (
     <div>
-      <Navigator />
-      <REGISTER/>
+      <Router>
+        <Navigator />
+      </Router>
     </div>
   );
 }
