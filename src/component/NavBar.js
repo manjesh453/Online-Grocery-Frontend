@@ -8,6 +8,7 @@ import REGISTER from "./Register";
 import CART from "./Cart";
 
 
+
 const Navigator = () => {
   return (
     <div>
