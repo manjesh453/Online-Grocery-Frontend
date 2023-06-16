@@ -7,15 +7,15 @@ import AdNav from "./admin/AdNav";
 function App() {
   return (
     <div>
-      {/* <Router>
-        <Navigator />
-      </Router> */}
       <Router>
+        <Navigator />
+      </Router>
+      {/* <Router>
         <Routes>
         <Route path="/" element={<AdminNavbar/>}/>
         <Route path="/adminshop" element={<AdNav/>}/>
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }

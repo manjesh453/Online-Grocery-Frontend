@@ -26,8 +26,7 @@ const USERHOME = () => {
             </div>
           </div>
           <div className="col-md-9">
-               <Products />
-
+          <Products />
           </div>
         </div>
       </div>
