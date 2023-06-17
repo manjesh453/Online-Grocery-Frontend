@@ -29,7 +29,7 @@ class AdminNavbar extends React.Component {
                 <i className="fa fa-keyboard me-2"></i>Subcategory
               </a>
               <a href="" className="nav-item nav-link">
-                <i className="fa fa-table me-2"></i>Add Products
+                <i className="fa fa-table me-2"></i>Products
               </a>
               <a href="" className="nav-item nav-link">
                 <i className="fa fa-chart-bar me-2"></i>Order
