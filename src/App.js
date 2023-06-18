@@ -1,4 +1,5 @@
 import "./App.css";
+import Category from "./admin/Category";
 import Subcategory from "./admin/Subcategory";
 import Navigator from "./component/NavBar";
 import AdminNavbar from "./admin/AdminNavbar";
@@ -17,7 +18,7 @@ function App() {
         <Route path="/adminshop" element={<AdNav/>}/>
         </Routes>
       </Router> */}
-     <Subcategory/>
+     <Category/>
     </div>
   );
 }

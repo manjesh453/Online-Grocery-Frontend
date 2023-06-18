@@ -16,7 +16,8 @@ function Category() {
             <th scope="row">1</th>
             <td>Fruits</td>
             <td>
-              <button className="btn btn-warning mr-2">Update</button>
+              <button className="btn btn-warning mr-2"data-toggle="modal"
+          data-target="#exampleModal1">Update</button>
               <button className="btn btn-danger">Delete</button>
             </td>
           </tr>
@@ -24,7 +25,8 @@ function Category() {
             <th scope="row">2</th>
             <td>Bakery</td>
             <td>
-              <button className="btn btn-warning mr-2">Update</button>
+              <button className="btn btn-warning mr-2" data-toggle="modal"
+          data-target="#exampleModal1">Update</button>
               <button className="btn btn-danger">Delete</button>
             </td>
           </tr>
@@ -32,7 +34,8 @@ function Category() {
             <th scope="row">3</th>
             <td>Drinks</td>
             <td>
-              <button className="btn btn-warning mr-2">Update</button>
+              <button className="btn btn-warning mr-2" data-toggle="modal"
+          data-target="#exampleModal1">Update</button>
               <button className="btn btn-danger">Delete</button>
             </td>
           </tr>
@@ -48,7 +51,7 @@ function Category() {
         </button>
       </div>
 
-      {/* Model */}
+      {/* Model for add category */}
 
       <div>
         <div
@@ -104,6 +107,65 @@ function Category() {
           </div>
         </div>
       </div>
+
+          {/* Model for update */}
+
+          <div>
+        <div
+          className="modal fade"
+          id="exampleModal1"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                 Update Category
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+
+                {/* form to Addcategory */}
+                <form >
+                  <div className="form-group">
+                    <label for="Addcategory">Enter Update Category Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="addcategory"
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-success">
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 }
