@@ -1,10 +1,10 @@
 import React from "react";
-import "./css/style.css";
-import "./css/bootstrap.min.css";
 import { BrowserRouter as Router ,Route,Routes} from 'react-router-dom';
 
 import { Link } from "react-router-dom";
 import AdNav from "./AdNav";
+import Category from "./Category";
+import Subcategory from "./Subcategory";
 
 class AdminNavbar extends React.Component {
   render() {
@@ -22,12 +22,12 @@ class AdminNavbar extends React.Component {
               <a href="index.html" className="nav-item nav-link active">
                 <i className="fa fa-tachometer-alt me-2"></i>Dashboard
               </a>
-              <a href="" className="nav-item nav-link">
+              <Link to="/category" className="nav-item nav-link">
                 <i className="fa fa-th me-2"></i>Category
-              </a>
-              <a href="" className="nav-item nav-link">
+              </Link>
+              <Link to="/subcategory" className="nav-item nav-link">
                 <i className="fa fa-keyboard me-2"></i>Subcategory
-              </a>
+              </Link>
               <a href="" className="nav-item nav-link">
                 <i className="fa fa-table me-2"></i>Products
               </a>
@@ -89,6 +89,7 @@ class AdminNavbar extends React.Component {
             </div>
           </nav>
           {/* Navbar End */}
+           
 
           {/* Back to Top */}
           <a
@@ -100,12 +101,15 @@ class AdminNavbar extends React.Component {
         </div>
         <Routes>
           <Route path="/adminshop" component={Adnave}/>
+          <Route exact path="/category" element={Category}/>
+          <Route path="/subcategory" element={Subcategory}/>
           </Routes>
       </div>
     );
   }
 }
 function Adnave(){
-  return <AdNav/>
+  return <AdNav/>;
+
 }
 export default AdminNavbar;

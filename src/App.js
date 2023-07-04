@@ -12,13 +12,15 @@ function App() {
       {/* <Router>
         <Navigator />
       </Router> */}
-      {/* <Router>
+      <Router>
         <Routes>
         <Route path="/" element={<AdminNavbar/>}/>
         <Route path="/adminshop" element={<AdNav/>}/>
+        <Route path="/category" element={<Category/>}/>
+        <Route path="/subcategory" element={<Subcategory/>}/>
         </Routes>
-      </Router> */}
-     <Category/>
+      </Router>
+     
     </div>
   );
 }

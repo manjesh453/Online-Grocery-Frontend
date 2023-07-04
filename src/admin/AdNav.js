@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaServicestack ,FaExternalLinkAlt} from "react-icons/fa";
 import { Route,Routes } from "react-router-dom";
-import CART from "../component/Cart";
+import cart from "./cart";
 
 
 
@@ -43,7 +43,7 @@ const AdNav = () => {
         </div>
       </nav>
       <Routes>
-          <Route path="/cart" element={<CART/>}/>
+          <Route path="/cart" element={<cart/>}/>
         </Routes>
     </div>
   );
