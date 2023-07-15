@@ -1,15 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router ,Route,Routes} from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Category from '../admin/Category';
+import Subcategory from '../admin/Subcategory';
 
-import { Link } from "react-router-dom";
-import AdNav from "./AdNav";
-import Category from "./Category";
-import Subcategory from "./Subcategory";
+const AdminNavbar = () => {
 
-class AdminNavbar extends React.Component {
-  render() {
     return (
-      <div className="container-xxl position-relative bg-white d-flex p-0">
+        <div className="container-xxl position-relative bg-white d-flex p-0">
         {/* Sidebar Start */}
         <div className="sidebar pe-4 pb-3">
           <nav className="navbar bg-light navbar-light">
@@ -19,19 +17,19 @@ class AdminNavbar extends React.Component {
               </h3>
             </Link>
             <div className="navbar-nav w-100">
-              <a href="index.html" className="nav-item nav-link active">
+              <Link to="/admin" className="nav-item nav-link active">
                 <i className="fa fa-tachometer-alt me-2"></i>Dashboard
-              </a>
-              <Link to="/category" className="nav-item nav-link">
+              </Link>
+              <Link to="admin/category" className="nav-item nav-link">
                 <i className="fa fa-th me-2"></i>Category
               </Link>
-              <Link to="/subcategory" className="nav-item nav-link">
+              <Link to="admin/subcategory" className="nav-item nav-link">
                 <i className="fa fa-keyboard me-2"></i>Subcategory
               </Link>
-              <a href="" className="nav-item nav-link">
+              <Link to="/product" className="nav-item nav-link">
                 <i className="fa fa-table me-2"></i>Products
-              </a>
-              <a href="" className="nav-item nav-link">
+              </Link>
+              <a href="/product" className="nav-item nav-link">
                 <i className="fa fa-chart-bar me-2"></i>Order
               </a>
               <a href="" className="nav-item nav-link">
@@ -89,27 +87,25 @@ class AdminNavbar extends React.Component {
             </div>
           </nav>
           {/* Navbar End */}
-           
-
+         
           {/* Back to Top */}
-          <a
-            href="#"
-            className="btn btn-lg btn-primary btn-lg-square back-to-top"
-          >
-            <i className="bi bi-arrow-up"></i>
-          </a>
-        </div>
-        <Routes>
-          <Route path="/adminshop" component={Adnave}/>
-          <Route exact path="/category" element={Category}/>
-          <Route path="/subcategory" element={Subcategory}/>
-          </Routes>
-      </div>
-    );
-  }
-}
-function Adnave(){
-  return <AdNav/>;
+          <div className="container">
+          <Routes>
+  <Route path='/admin'>
+    <Route path="category" element={<Category />} />
+    <Route path="subcategory" element={<Subcategory />} />
+  </Route>
+</Routes>
 
-}
+            </div>
+        </div>
+       
+      </div>
+       
+            
+
+    );
+};
+
 export default AdminNavbar;
+

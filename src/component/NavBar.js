@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import { FaServicestack } from "react-icons/fa";
 import { Route, Routes } from "react-router-dom";
 import LOGIN from "./Login";
-import USERHOME from "./UserHome";
 import REGISTER from "./Register";
 import CART from "./Cart";
+import UserHome from "./UserHome";
+import Category from "./Category";
 
-const Navigator = () => {
+const NavBar = () => {
   return (
     <div>
       <nav
@@ -15,7 +16,7 @@ const Navigator = () => {
         style={{ backgroundColor: "orange" }}
       >
         <Link
-          to="/home"
+          to="/"
           style={{ textDecoration: "none", color: "black", fontSize: "50px" }}
         >
           Online Shopping
@@ -73,12 +74,14 @@ const Navigator = () => {
         </div>
       </nav>
       <Routes>
+        <Route path="/" element={ <UserHome /> } />
         <Route path="/login" element={<LOGIN />} />
-        <Route path="/home" element={<USERHOME />} />
+        <Route path="/home" element={<UserHome/>} />
         <Route path="/register" element={<REGISTER />} />
         <Route path="/cart" element={<CART />} />
+        <Route path="/category/:id" element={<Category />} />
       </Routes>
     </div>
   );
 };
-export default Navigator;
+export default NavBar;
