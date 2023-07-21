@@ -29,12 +29,18 @@ console.log("edit"+id)
   const add=async(e)=>{
     e.preventDefault();
     const categoryName = e.target.newcategory.value;
+
+   const data={
+      'categoryName': categoryName
+    }
+   // return console.log(data)
    
-  await  axios.post(`http://localhost:8080/api/category/`,categoryName,{
+  await  axios.post(`http://localhost:8080/api/category/`,data,{
 headers:{
   'Content-Type': 'application/json',
   'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXlhbWFqaGltYW5qZXNoNDJAZ21haWwuY29tIiwiZXhwIjoxNjg5NDMzODI4LCJpYXQiOjE2ODk0MTU4Mjh9.Jndet3Y_MD_ybMLE2R6MnzVzif2gkqVln0SpZPaRZic'
 }
+
     }).then(res=>{
       console.log(res)
 
